@@ -1,0 +1,73 @@
+<style>
+        /* Clean, Matte Dark Background (Absolutely No Ambient Backdrop Glow) */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0d0f12 !important;
+            background-image: none !important;
+            box-shadow: none !important;
+            transition: background-color 0.3s ease;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Crisp, Sharp Outer Glow Centered ONLY on the Login Board */
+        .login-board {
+            background: rgba(20, 24, 33, 0.85) !important;
+            border: 1px solid rgba(99, 102, 241, 0.3) !important; /* Crisp colored border */
+            border-radius: 12px !important;
+            padding: 40px !important;
+            box-shadow: 0 0 25px 5px rgba(99, 102, 241, 0.35) !important; /* Strict sharp outer glow */
+        }
+
+        /* Sharp Pulsing PNG/SVG Glow for the Logo Shape (Breathing up and down) */
+        @keyframes pulse-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5)) !important;
+            }
+            50% {
+                filter: drop-shadow(0 0 24px rgba(99, 102, 241, 0.9)) !important;
+            }
+        }
+
+        .logo-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        /* Clean Glass Panel design (Subtle borders, no background ambient glow) */
+        .glass {
+            background: rgba(18, 22, 30, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* Light Mode clean overrides */
+        .light-theme {
+            background-color: #f8fafc !important;
+            background-image: none !important;
+        }
+
+        .light-theme .glass {
+            background: rgba(255, 255, 255, 0.8) !important;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            color: #1e293b !important;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.3);
+            border-radius: 99px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.6);
+        }
+    </style>
